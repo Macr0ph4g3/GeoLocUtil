@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "weather": "node index.js"
+    "weather": "node ./App/index.js --locations",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
