@@ -1,0 +1,24 @@
+{
+  "name": "geolocutil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "weather": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Macr0ph4g3/GeoLocUtil.git"
+  },
+  "author": "Bladymir Lombardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Macr0ph4g3/GeoLocUtil/issues"
+  },
+  "homepage": "https://github.com/Macr0ph4g3/GeoLocUtil#readme",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "yargs": "^17.7.2"
+  }
+}
