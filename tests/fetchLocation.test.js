@@ -1,14 +1,14 @@
-const { processLocations } = require("../App/coreFunctions");
+const { processLocations, handleLocations } = require("../App/coreFunctions");
 const axios = require("axios");
 
 describe("Testing processLocations functionality", () => {
   test("Able to input single city", async () => {
-    const location = ["Seattle, WA"];
+    const location = ["Los Angeles, WA"];
     const result = await processLocations(location);
 
     expect(result).toStrictEqual({
-      latitude: 47.6038321,
-      longitude: -122.330062,
+      latitude: 34.0536909,
+      longitude: -118.242766,
       name: "Seattle",
     });
   });
@@ -24,7 +24,7 @@ describe("Testing processLocations functionality", () => {
     });
   });
 
-  test("Able to input mixed arguments", async () => {
+  test("Able to input multiple arguments", async () => {
     const locations = ["Seattle, WA", 91316];
     let result = [];
 
@@ -63,7 +63,7 @@ describe("Testing processLocations functionality", () => {
 
     // Await the promise rejection and check for the correct error message
     await expect(processLocations(locations)).rejects.toThrow(
-      "Invalid location"
+      "Invalid Location"
     );
   });
 
@@ -72,7 +72,7 @@ describe("Testing processLocations functionality", () => {
 
     // Await the promise rejection and check for the correct error message
     await expect(processLocations(locations)).rejects.toThrow(
-      "Invalid location"
+      "Invalid Location"
     );
   });
 
@@ -92,7 +92,7 @@ describe("Testing processLocations functionality", () => {
 
     // Await the promise rejection and check for the correct error message
     await expect(processLocations(locations)).rejects.toThrow(
-      "Invalid location"
+      "Invalid Location"
     );
   });
 });

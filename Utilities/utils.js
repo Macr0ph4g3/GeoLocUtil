@@ -23,7 +23,7 @@ function buildUrl(location, apiKey) {
     );
     return `http://api.openweathermap.org/geo/1.0/direct?q=${encodedCity},${encodedState},US&limit=1&appid=${apiKey}`;
   } else {
-    throw new Error(`Invalid location.`);
+    throw new Error(`Invalid Location.`);
   }
 }
 module.exports = { isValidZip, isCityStateFormat, buildUrl };
