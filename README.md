@@ -59,12 +59,16 @@ npm run weather "21701"
 node cli.js --locations "San José, CA" "94105" "90001"
 ```
 
+## Testing
+
+Testing for this utility is done using Jest. You can run them by using the command below.
+
+```sh
+npm test
+```
+
 ## Files Overview
 
 - `cli.js`: The main entry point of the CLI. It uses `yargs` for parsing command-line arguments and handles the invocation of core functions.
 - `coreFunctions.js`: Contains functions to fetch and process location data, and print results to the console.
 - `utils.js`: Utility functions to validate location formats and build the appropriate API URL. These could be used in other files if this were to be expanded upon.
-
-## Error Handling
-
-- If no location is provided, or if the location is invalid, an error message will be shown.

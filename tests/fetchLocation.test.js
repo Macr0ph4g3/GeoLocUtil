@@ -3,13 +3,13 @@ const axios = require("axios");
 
 describe("Testing processLocations functionality", () => {
   test("Able to input single city", async () => {
-    const location = ["Los Angeles, WA"];
+    const location = ["Los Angeles, CA"];
     const result = await processLocations(location);
 
     expect(result).toStrictEqual({
       latitude: 34.0536909,
       longitude: -118.242766,
-      name: "Seattle",
+      name: "Los Angeles",
     });
   });
 
