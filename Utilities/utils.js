@@ -18,9 +18,6 @@ function buildUrl(location, apiKey) {
     const [city, state] = stringifiedLocation.split(",");
     const encodedCity = encodeURIComponent(city.trim());
     const encodedState = encodeURIComponent(state.trim());
-    console.log(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${encodedCity},${encodedState},US&limit=1&appid=${apiKey}`
-    );
     return `http://api.openweathermap.org/geo/1.0/direct?q=${encodedCity},${encodedState},US&limit=1&appid=${apiKey}`;
   } else {
     throw new Error(`Invalid Location.`);
