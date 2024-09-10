@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "weather": "node ./App/index.js --locations",
+    "weather": "node ./App/cli.js --locations",
     "test": "jest"
   },
   "repository": {
